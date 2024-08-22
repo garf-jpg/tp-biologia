@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico de Biología</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #87CEFA; /* Azul claro para un fondo más atractivo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .box {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .box:hover {
+            background-color: #45a049;
+        }
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            padding: 0 15px;
+            border-radius: 8px;
+        }
+        .content.open {
+            max-height: 1000px; /* Un valor lo suficientemente grande para mostrar todo el contenido */
+            padding: 15px;
+        }
+        .link-box {
+            background-color: #2196F3;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .link-box:hover {
+            background-color: #1e88e5;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Trabajo Práctico de Biología</h1>
+
+    <div class="container">
+
+        <!-- Flora -->
+        <div class="box" onclick="toggleContent('floraContent')">Flora</div>
+        <div id="floraContent" class="content">
+            <div class="box" onclick="toggleContent('nativas')">Nativas</div>
+            <div id="nativas" class="content">
+                <p>en esta zona hay especies que son nativas como el celibato y el tala (arboles) que forman bosques en la reserva mientras que por otro lado hay plantas acuáticas como los juncos y cortaderas que crecen en los humedales. también las totoras y los camalotes son esenciales en los cuerpos de agua ya que estos son los que le otorgan refugio y alimento a las especies de allí.</p>
+                <img src="ruta_de_la_imagen_nativa_1.jpg" alt="Imagen de planta nativa 1">
+                <img src="ruta_de_la_imagen_nativa_2.jpg" alt="Imagen de planta nativa 2">
+            </div>
+            <div class="box" onclick="toggleContent('invasivas')">Invasivas</div>
+            <div id="invasivas" class="content">
+                <p>en la reserva hay plantas exóticas, es decir, no pertenecientes a la región como lo son la acacia negra o el ligustro que compiten con las especies nativas por los recursos.</p>
+                <img src="ruta_de_la_imagen_invasiva_1.jpg" alt="Imagen de planta invasiva 1">
+                <img src="ruta_de_la_imagen_invasiva_2.jpg" alt="Imagen de planta invasiva 2">
+            </div>
+        </div>
+
+        <!-- Fauna -->
+        <div class="box" onclick="toggleContent('faunaContent')">Fauna</div>
+        <div id="faunaContent" class="content">
+            <div class="box" onclick="toggleContent('aves')">Aves</div>
+            <div id="aves" class="content">
+                <p> en al reserva hay aves fijas (residentes) pero tambien hay estacionarias (migratorias) como la garza blanca o el cisne de cuello negro que dependen de la vegetación para formar sus nidos y de los cuerpos de agua para alimentarse.</p>
+                <img src="ruta_de_la_imagen_ave_1.jpg" alt="Imagen de ave 1">
+                <img src="ruta_de_la_imagen_ave_2.jpg" alt="Imagen de ave 2">
+            </div>
+            <div class="box" onclick="toggleContent('mamiferos')">Mamíferos</div>
+            <div id="mamiferos" class="content">
+                <p>el coipo o el murciélago orejas de ratón son algunos de los que habitan en la reserva y se alimentan ya sea de plantas o de insectos.</p>
+                <img src="ruta_de_la_imagen_mamifero_1.jpg" alt="Imagen de mamífero 1">
+                <img src="ruta_de_la_imagen_mamifero_2.jpg" alt="Imagen de mamífero 2">
+            </div>
+            <div class="box" onclick="toggleContent('reptiles')">Reptiles y Anfibios</div>
+            <div id="reptiles" class="content">
+                <p>el lagarto overo y las ranas son algunos ejemplos de estos habitantes de la reserva y dependen de la calidad del agua y de la vegetación para encontrarlos en ciertas zonas .</p>
+                <img src="ruta_de_la_imagen_reptil_1.jpg" alt="Imagen de reptil 1">
+                <img src="ruta_de_la_imagen_anfibio_1.jpg" alt="Imagen de anfibio 1">
+            </div>
+            <div class="box" onclick="toggleContent('insectos')">Insectos</div>
+            <div id="insectos" class="content">
+                <p>las mariposas y abejas son aquellos insectos que se encargan de polinizar las plantas en la costanera sur permitiendo la generación de semillas lo que asegura la continuidad de las especies polinizadas pero también hay otros insectos que sirven como alimento de aves o de pequeños mamíferos como lo es el murciélago orejas de ratón.</p>
+                <img src="ruta_de_la_imagen_insecto_1.jpg" alt="Imagen de insecto 1">
+                <img src="ruta_de_la_imagen_insecto_2.jpg" alt="Imagen de insecto 2">
+            </div>
+        </div>
+
+        <!-- Factores -->
+        <div class="box" onclick="toggleContent('factoresContent')">Factores</div>
+        <div id="factoresContent" class="content">
+            <div class="box" onclick="toggleContent('luz')">Luz Solar</div>
+            <div id="luz" class="content">
+                <p>esta es esencial para la fotosíntesis, que son la base de la cadena alimentaria. La luz solar varía según la densidad de la vegetación y la época del año, por lo que esta es la que afecta la dinámica de las especies.</p>
+            </div>
+            <div class="box" onclick="toggleContent('suelo')">Suelo</div>
+            <div id="suelo" class="content">
+                <p>el suelo en la reserva es muy rico en nutrientes ya que el suelo en algunas zonas es arenoso, con sedimentos ricos en materia y otros con arcilla lo que facilita el crecimiento de la vegetación. mientras que por otro lado los suelos son de humedales, ricos en materia orgánica, lo que facilita el crecimiento de las plantas acuáticas y las aves que dependen de este hábitat.Esto se ve complementado con la alta salinidad presente en la tierra debido a la proximidad al Río de la Plata lo que causa que alguna plantas no se puedan crecer en ciertos lugares.</p>
+            </div>
+            <div class="box" onclick="toggleContent('agua')">Agua</div>
+            <div id="agua" class="content">
+                <p> en esta zona son esenciales los humedales, las lagunas y los cuerpos de agua ya que generan una gran humedad lo que favorece a los humedales debido a que facilita el crecimiento de flora y regula la temperatura, purifica el agua y permite un hábitat para especies acuáticas influyendo en la biodiversidad. Por otro lado, las lluvias son las que mantienen los humedales y las lagunas, por lo que son las encargadas de sustentar la vegetación.</p>
+            </div>
+            <div class="box" onclick="toggleContent('clima')">Clima</div>
+            <div id="clima" class="content">
+                <p>el clima en la reserva es templado con temperaturas que van desde los 5°C y los 30° en verano causando una fluctuación en las vidas de las especies que habitan en la reserva.</p>
+            </div>
+        </div>
+
+        <!-- Recursos -->
+        <div class="box" onclick="toggleContent('recursosContent')">Recursos</div>
+        <div id="recursosContent" class="content">
+            <div class="box" onclick="toggleContent('alimenticios')">Recursos Alimenticios</div>
+            <div id="alimenticios" class="content">
+                <div class="box" onclick="toggleContent('plantasAcuaticas')">Plantas Acuáticas y Terrestres</div>
+                <div id="plantasAcuaticas" class="content">
+                    <p> los juncos y las totoras por ejemplo crecen en las lagunas y son consumidas por especies como el carpincho y algunas aves como la gallineta mientras que por otro lado, los frutos y hojas nativas como las del ceibo o la del tala sirven de alimento para diversas aves como la calandria o pequeños mamíferos.</p>
+                </div>
+                <div class="box" onclick="toggleContent('insectosInvertebrados')">Insectos y Pequeños Invertebrados</div>
+                <div id="insectosInvertebrados" class="content">
+                    <p> los escarabajos y las hormigas son presas de aves insectívoras como el benteveo y el hornero pero también por ejemplo, las mariposas son parte de la dieta de pequeños reptiles como las lagartijas.</p>
+                </div>
+                <div class="box" onclick="toggleContent('pecesAnfibios')">Peces y Anfibios</div>
+                <div id="pecesAnfibios" class="content">
+                    <p>las mojarras también forman parte de una cadena trófica ya que son parte de la dieta de aves piscívoras como la garza blanca. por otro lado, los renacuajos y las ranas adultas son consumidas por serpientes.</p>
+                </div>
+                <div class="box" onclick="toggleContent('avesMamiferos')">Aves y Mamíferos Pequeños</div>
+                <div id="avesMamiferos" class="content">
+                    <p>aves pequeñas como los chimangos tienen en su dieta pequeños mamíferos como los ratos y otras aves pequeñas como el tordo renegrido.</p>
+                </div>
+            </div>
+
+            <div class="box" onclick="toggleContent('fisicos')">Recursos Físicos</div>
+            <div id="fisicos" class="content">
+                <div class="box" onclick="toggleContent('vegetacionDensa')">Vegetación Densa</div>
+                <div id="vegetacionDensa" class="content">
+                    <p>el pastizal denso y los bosques de la reserva sirven de refugio para diferentes especies que normalmente las utilizan para ocultarse de depredadores y para criar a sus crías en estas zonas protegidas.</p>
+                </div>
+                <div class="box" onclick="toggleContent('cuerposAgua')">Cuerpos de Agua</div>
+                <div id="cuerposAgua" class="content">
+                    <p>las lagunas dentro de la reserva no sirven solo para que los peces y anfibios se refugien, sino que también que allí se reproducen aves que necesitan cuerpos de agua poco profundos.</p>
+                </div>
+                <div class="box" onclick="toggleContent('suelosTroncos')">Suelos y Troncos Caídos</div>
+                <div id="suelosTroncos" class="content">
+                    <p> los troncos caídos y los suelos húmedos sirven de hábitat para las lombrices de tierra que descomponen la materia y reciclan los nutrientes, favoreciendo a las plantas beneficiando a pequeños mamíferos como el cuis para hacer sus madrigueras.</p>
+                </div>
+                <div class="box" onclick="toggleContent('microhabitats')">Microhábitats</div>
+                <div id="microhabitats" class="content">
+                    <p>los charcos que se forman después de lluvias son importantes para la reproducción de animales como sapos ya que necesitan de estos lugares para depositar sus huevos.</p>
+                </div>
+            </div>
+
+            <div class="box" onclick="toggleContent('sociales')">Recursos Sociales</div>
+            <div id="sociales" class="content">
+                <div class="box" onclick="toggleContent('apareamiento')">Comportamiento de Apareamiento</div>
+                <div id="apareamiento" class="content">
+                    <p>el canto de aves como el benteveo es un ejemplo de cortejo. esto ocurre debido a que el macho canta para atraer a las hembras y establecer su territorio, al igual que las mariposas desprenden feromonas para encontrar pareja para reproducirse.</p>
+                </div>
+                <div class="box" onclick="toggleContent('colonias')">Colonias y Asociaciones</div>
+                <div id="colonias" class="content">
+                    <p>las garzas forman colonias de anidación en los árboles cerca de cuerpos de agua lo que les brinda un fácil acceso al alimento y se protegen mutuamente de depredadores.</p>
+                </div>
+                <div class="box" onclick="toggleContent('mutualistas')">Relaciones Mutualistas</div>
+                <div id="mutualistas" class="content">
+                    <p>esto ocurre por ejemplo entre las flores del ceibo y las abejas ya que estas polinizan las flores mientras recolectan el néctar, facilitando la reproducción de esta especie y proporcionandole alimento a las abejas.</p>
+                </div>
+                <div class="box" onclick="toggleContent('jerarquias')">Jerarquías y Territorios</div>
+                <div id="jerarquias" class="content">
+                    <p> los carpinchos viven en grupos familiares donde existe una priorización del acceso de recursos como el agua y la comida basándose en la dominación. por ejemplo, los machos dominantes y las hembras en temporada de apareamiento son los grupos que tienen el control sobre las mejores areas de alimentacion.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="link-box" onclick="openLink()">Ir al enlace</div>
+
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var element = document.getElementById(id);
+            if (element.classList.contains("open")) {
+                element.classList.remove("open");
+            } else {
+                element.classList.add("open");
+            }
+        }
+
+        function openLink() {
+            window.open('https://www.ejemplo.com', '_blank');
+        }
+    </script>
+
+</body>
+</html>
